@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+    
+      <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+        
+        <title>
+            INDEX
+        </title>
+          
+        <body>
+            <main class="main-content" id="main">
+                <div class="count" id="count"></div>
+                <br>
+                <div id="product-list" class="product-list">
+{{#each results}}
+
+                    <div class="card" style="color:orangered">
+
+                        <img src="/{{this.thumbnail}}" alt="">
+
+                        <p>{{this.title}}</p>
+
+                        <p>{{this.description}}</p>
+
+                        <a class="details" href="/posts/{{this.id}}">Post details</a>
+
+                    </div>
+
+                  {{/each}}
+                </div>                                                  
+            </main>
+        </body>
+    </head>
+</html>

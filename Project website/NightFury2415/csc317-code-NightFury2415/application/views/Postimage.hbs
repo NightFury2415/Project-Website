@@ -1,0 +1,33 @@
+<html>
+   <head>
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+       <title>
+          POSTIMAGE FORM
+        </title>
+      <body>
+           <main class="main-content">
+            <form action="/posts/create" id="post-image" method="post" enctype="multipart/form-data">
+                <fieldset class="border-color">
+                    <Legend>Post Image Portal</Legend>
+                <label for="Post Title">Post Title</label>
+                <input class="margins" type="text" placeholder ="Enter a title" name="title" required>
+                <br>
+                <label for="Post Description">Post Description</label>
+                <input class="margins" type="text" placeholder="Enter a description" name="description">
+                <br>
+                <label>Upload an Image</label>
+                <input class="margins" type="file" name="uploadImage" accept="image/jpg" required> 
+                <br>
+                <div class="input-group">
+                <input class="margins" type="checkbox" required>
+                <span>Accept The Policy for Uploading Images</span>
+                <a class="links" href=" ">Policy For Uploading Images</a>
+                </div>
+                
+                <input class="button" type="submit" value="Submit Image" />
+             </fieldset>
+              </form>   
+            </main>
+       </body>
+     </head> 
+</html>

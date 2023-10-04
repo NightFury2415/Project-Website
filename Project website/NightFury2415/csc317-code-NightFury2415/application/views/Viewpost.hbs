@@ -1,0 +1,38 @@
+<html>
+   <head>
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script defer type="text/javascript" src="/public/js/viewpost.js"></script>
+       <title>
+          VIEWPOST Form
+        </title>
+      <body>
+          {{log this}}
+     
+           <main class="main-content">
+                
+            <section class="margins">Post Title   :   {{currentPost.title}}</section>
+            <br>
+            <section class="margins">Post Author  :   {{currentPost.username}}</section>
+            <br>
+            <section class="margins">Post Description :  {{currentPost.description}}</section>
+            <br>
+            <section class="margins">Date    :    {{formatDate currentPost.createdAt}}</section>  
+            <br> 
+            <img class="image" src="/{{currentPost.image}}">
+            <br>
+            
+            <input type="text" name="comment" id="comment" class="main-content">
+            <button type="submit" class="nav-items" data-postid="{{currentPost.id}}" id="comment-button">Comment</button>
+
+            <div id="comment-list" class="comments">
+              {{#each currentPost.comments}}
+                  {{> comment this}}
+              {{/each}}
+            </div>
+            
+            </main>
+       </body>
+     </head> 
+</html>
+
+

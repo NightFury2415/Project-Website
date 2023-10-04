@@ -1,0 +1,41 @@
+
+<header>
+        <heading >
+                <h1 class="title">My Photo App</h1>
+                 
+              </heading>
+              
+            <nav class="nav-bar"> 
+              
+                 <a href="/" class="nav-items">Index </a> &ensp;
+                 {{#if isLoggedIn}}
+                 <a class="nav-items" id="logout-button">Log Out</a>&ensp;
+                 {{else}}
+                 <a href= "/login" class="nav-items">Login</a> &ensp;
+                 {{/if}}
+
+                 {{#if isLoggedIn}}
+                    <a href="/" class="nav-items"><span>Registration</span></a> &ensp;
+                    {{else}}
+
+                      <a href= "/Registration" class="nav-items">Registration </a>&ensp;
+                 {{/if}}
+                 <a href= "/Postimage" class="nav-items">Postimage </a>&ensp;
+                 <form class="search-bar" method="GET" action="/posts/search" enctype="application/x-www-form-urlencoded" >
+                  <li class="search-bar">
+                    <input id="search-text" class="search-text" name="searchTerm" type="text "/>
+                    <button type="submit" class="nav-items" >Search</button>
+                  </li>
+
+
+                 </form>
+                 
+                </ul>
+            </nav>
+            <br>
+
+        </header>
+
+
+
+        
